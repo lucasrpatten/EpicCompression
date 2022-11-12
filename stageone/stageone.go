@@ -1,16 +1,20 @@
 package stageone
 
 import (
-	"fmt"
 	"strings"
 )
 
 func StageOne(s string) {
-	splitstring := strings.Split(s, " ")
-	for i := 0; i < len(splitstring); i++ {
-		var word string =
-		if splitstring[i] == "killed" {
-			fmt.Print(splitstring[i])
-		}
+	var words []string = strings.Split(s, " ")
+	var histogram map[string]int = make(map[string]int)
+	for _, str := range words {
+		histogram[str]++
 	}
+
+	MapSort(histogram)
+
+}
+
+func MapSort(arr map[string]int) map[string]int {
+
 }
